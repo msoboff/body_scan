@@ -1,0 +1,41 @@
+<template name="bodyScan">
+    {{#contentFor "headerButtonLeft"}}
+
+    {{/contentFor}}
+
+    {{#contentFor "headerButtonRight"}}
+        <button class="button button-clear pull-right button-positive" data-ion-modal="newProduct">
+            {{> ionIcon icon='ios-plus-empty'}}
+        </button>
+    {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Body Scan</h1>
+    {{/contentFor}}
+
+    {{#ionSubheaderBar}}
+        <div class="text-center">
+            How are you feeling today? <br>Tap an area where you are feeling pain.
+        </div>
+    {{/ionSubheaderBar}}
+
+
+
+    {{#ionView}}
+        {{#ionContent}}
+
+            <button class="button button-clear pull-right button-positive" id="flip">
+                {{> ionIcon icon='loop'}} Flip
+            </button>
+
+            <div id="bodyMap">
+                <a href="#" class="core" data-ion-modal="core"></a>
+                <a href="#" class="rightLegFront" data-ion-modal="rightLegFront"></a>
+            </div>
+
+
+
+
+        {{/ionContent}}
+    {{/ionView}}
+</template>

@@ -1,0 +1,61 @@
+#bodyMap {
+    background-image: url("human-front.png");
+    width: 400px;
+    height: 775px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#flip {
+    position: fixed;
+    z-index: 1;
+}
+
+.core{
+    position: absolute;
+    left: 145px;
+    top: 215px;
+    width: 110px;
+    height: 140px;
+}
+
+.rightLegFront{
+    position: absolute;
+    left: 125px;
+    top: 385px;
+    width: 80px;
+    height: 150px;
+}
+
+.rightLegFront:hover {
+    background-color: yellow;
+}
+
+.core:hover {
+    background-color: yellow;
+}
+
+.core:active{
+    background-color: blue;
+}
+
+.corePain{
+
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 180px;
+    top: 270px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow:
+    0 0 60px 30px #ff0000,  /* inner white */
+    0 0 65px 35px #fff /* middle magenta */
+}
+
+
+
+input[type=range] {
+    width: 300px;
+}

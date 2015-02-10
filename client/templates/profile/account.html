@@ -1,0 +1,29 @@
+<template name="account">
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Account</h1>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            <div class="list">
+                <div class="item item-divider">
+                    Account
+                </div>
+                <div class="item">
+                    {{username}}
+                    <br>
+                    Joined:
+                </div>
+
+
+                <div class="item">
+                    <a class="item item-icon-left item-icon-right" href="#" data-action="sign-out">
+                        {{> ionIcon icon="ios-locked"}}
+                            Sign Out
+                        {{> ionIcon icon="ios-arrow-right"}}
+                    </a>
+                </div>
+            </div>
+        {{/ionContent}}
+    {{/ionView}}
+</template>

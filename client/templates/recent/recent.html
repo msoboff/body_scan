@@ -1,0 +1,46 @@
+<template name="recent">
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Recent History</h1>
+    {{/contentFor}}
+
+    {{#each muscleSet}}
+
+    {{#ionSubheaderBar class="bar-light"}}
+        <button class="button button-clear pull-left button-positive" id="yesterday">
+            {{> ionIcon icon='arrow-left-b'}}
+        </button>
+
+
+            <p class="title">
+                {{date}}
+            </p>
+
+
+        <button class="button button-clear pull-left button-positive" id="tomorrow">
+            {{> ionIcon icon='arrow-right-b'}}
+        </button>
+
+    {{/ionSubheaderBar}}
+    {{/each}}
+
+    {{#ionView}}
+        {{#ionContent}}
+
+            {{#each muscleSet}}
+
+            <p>Muscle Group</p>
+            {{muscleSelected}}
+
+            <div id="bodyMap">
+                <h2>{{pain}}</h2>
+                <a href="#" class="corePain"></a>
+            </div>
+
+
+            {{/each}}
+
+
+        {{/ionContent}}
+    {{/ionView}}
+
+</template>
