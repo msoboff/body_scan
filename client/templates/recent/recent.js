@@ -141,7 +141,24 @@ Template.recent.helpers({
         return Logs.find({date: day, createdBy: createdBy});
 
 
+    },
+
+    isCore:function() {
+        return this.muscleSelected === "core";
+    },
+
+    isRightLegFront: function() {
+        return this.muscleSelected === "rightLegFront";
+    },
+
+    isLeftLegFront: function() {
+        return this.muscleSelected === "leftLegFront";
+    },
+
+    isLeftArmFront: function() {
+        return this.muscleSelected === "leftArmFront";
     }
+
 });
 
 Template.recent.events({
@@ -162,4 +179,5 @@ Template.recent.events({
         }
 
     }
+
 });

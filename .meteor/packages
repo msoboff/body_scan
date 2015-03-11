@@ -14,6 +14,6 @@ meteoric:ionic
 fourseven:scss
 accounts-password
 accounts-ui
-jquery
-manuelschoebel:wait-on-lib
 useraccounts:ionic
+underscore
+email

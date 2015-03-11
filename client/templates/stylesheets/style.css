@@ -1,7 +1,7 @@
 #bodyMap {
     background-image: url("human-front.png");
-    width: 400px;
-    height: 775px;
+    width: 325px;
+    height: 696px;
     position: relative;
     background-repeat: no-repeat;
     background-position: center;
@@ -12,23 +12,95 @@
     z-index: 1;
 }
 
+textarea {
+    resize: none;
+}
+
+.padding{
+    text-align: center;
+}
+
+.leftArmFront{
+    position: absolute;
+    left: 230px;
+    top: 110px;
+    width: 50px;
+    height: 205px;
+}
+
+.leftArmFrontPain{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 230px;
+    top: 130px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow:
+    0 0 60px 30px #ff0000,  /* inner white */
+    0 0 65px 35px #fff /* middle magenta */
+}
+
 .core{
     position: absolute;
-    left: 145px;
-    top: 215px;
-    width: 110px;
+    left: 115px;
+    top: 200px;
+    width: 95px;
     height: 140px;
 }
 
 .rightLegFront{
     position: absolute;
-    left: 125px;
-    top: 385px;
-    width: 80px;
-    height: 150px;
+    left: 105px;
+    top: 350px;
+    width: 60px;
+    height: 140px;
+}
+
+.rightLegFrontPain{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 145px;
+    top: 420px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow:
+    0 0 60px 30px #ff0000,  /* inner white */
+    0 0 65px 35px #fff /* middle magenta */
+}
+
+.leftLegFront{
+    position: absolute;
+    left: 175px;
+    top: 350px;
+    width: 60px;
+    height: 140px;
+}
+
+.leftLegFrontPain{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 180px;
+    top: 400px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow:
+    0 0 60px 30px #ff0000,  /* inner white */
+    0 0 65px 35px #fff /* middle magenta */
+}
+
+
+.leftArmFront:hover {
+    background-color: yellow;
 }
 
 .rightLegFront:hover {
+    background-color: yellow;
+}
+
+.leftLegFront:hover {
     background-color: yellow;
 }
 
@@ -36,17 +108,14 @@
     background-color: yellow;
 }
 
-.core:active{
-    background-color: blue;
-}
 
 .corePain{
 
     position: absolute;
     width: 30px;
     height: 30px;
-    left: 180px;
-    top: 270px;
+    left: 145px;
+    top: 240px;
     border-radius: 50%;
     background-color: black;
     box-shadow:

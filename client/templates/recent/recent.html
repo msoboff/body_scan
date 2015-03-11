@@ -1,21 +1,34 @@
 <template name="recent">
+
+    {{#each muscleSet}}
     {{#contentFor "headerTitle"}}
         <h1 class="title">Recent History</h1>
     {{/contentFor}}
 
+    <!-- button to download historical data -->
+    {{#contentFor "headerButtonRight"}}
+        <button class="button button-clear pull-right" data-ion-modal="sendEmail">
+            {{> ionIcon icon='ios-upload-outline'}}
+        </button>
+    {{/contentFor}}
+
+
+    {{/each}}
+
     {{#each muscleSet}}
 
+        <!-- button to go to the previous day -->
     {{#ionSubheaderBar class="bar-light"}}
         <button class="button button-clear pull-left button-positive" id="yesterday">
             {{> ionIcon icon='arrow-left-b'}}
         </button>
 
-
+        <!-- data being displayed for currently selected date by user (does not have to be today) -->
             <p class="title">
                 {{date}}
             </p>
 
-
+        <!-- button to go to the next day -->
         <button class="button button-clear pull-left button-positive" id="tomorrow">
             {{> ionIcon icon='arrow-right-b'}}
         </button>
@@ -26,18 +39,29 @@
     {{#ionView}}
         {{#ionContent}}
 
-            {{#each muscleSet}}
-
-            <p>Muscle Group</p>
-            {{muscleSelected}}
-
+            <div class="padding">
+                <button class="button button-small icon-left ion-ios-body button-outline button-positive">Body</button><button class="button button-small icon-left ion-stats-bars button-outline button-positive">Graph</button>
+            </div>
             <div id="bodyMap">
                 <h2>{{pain}}</h2>
+            {{#each muscleSet}}
+                {{#if isCore}}
                 <a href="#" class="corePain"></a>
+                {{/if}}
+                {{#if isRightLegFront}}
+                <a href="#" class="rightLegFrontPain"></a>
+                {{/if}}
+                {{#if isLeftLegFront}}
+                    <a href="#" class="leftLegFrontPain"></a>
+                {{/if}}
+                {{#if isLeftArmFront}}
+                    <a href="{{pathFor 'review'}}" class="leftArmFrontPain"></a>
+                {{/if}}
+            {{/each}}
             </div>
 
 
-            {{/each}}
+
 
 
         {{/ionContent}}

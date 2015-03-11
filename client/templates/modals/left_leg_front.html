@@ -1,0 +1,37 @@
+<template name="leftLegFront">
+
+    {{#ionModal focusFirstInput=true title="Left Leg Front"}}
+
+
+        <div class="list">
+            <form class="data" oninput="amount.value=rangeInput.value">
+                <div class="item item-divider">
+                    Pain Scale
+                </div>
+                <div class="item item-input-inset">
+
+                    <input type="range" id="rangeInput" name="rangeInput" value="5" min="0" max="10">
+
+                    <output id="amount" for="rangeInput">5</output>
+
+
+                </div>
+
+
+                <div class="item item-divider">
+                    Tightness Scale
+                </div>
+                <div class="item item-input-inset">
+
+                    <input type="range" id="rangeInput" name="rangeInput" min="0" max="10">
+
+                    <output name="amount" for="rangeInput">5</output>
+
+                </div>
+                <input type="submit">
+            </form>
+        </div>
+
+
+    {{/ionModal}}
+</template>

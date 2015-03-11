@@ -1,0 +1,14 @@
+<template name="review">
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Review</h1>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent}}
+            <h1>Date: {{date}}</h1>
+            <h1>Pain: {{pain}}</h1>
+            <h1>Tightness: {{tightness}}</h1>
+            <h1>Notes: {{notes}}</h1>
+        {{/ionContent}}
+    {{/ionView}}
+</template>

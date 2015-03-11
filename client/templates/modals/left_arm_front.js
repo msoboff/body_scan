@@ -15,14 +15,18 @@ if(mm<10) {
 today = mm+'/'+dd+'/'+yyyy;
 
 
-Template.rightLegFront.events({
+Template.leftArmFront.events({
     //handle form submission when user is entering pain and tightness data
     'submit form': function(event) {
         event.preventDefault();
         var x = document.getElementById("rangeInput").value;
-        var muscleSelected = "rightLegFront";
+        var y = document.getElementById("tightnessInput").value;
+        var z = document.getElementById("notes").value;
+        var muscleSelected = "leftArmFront";
         Logs.insert({
             pain: x,
+            tightness: y,
+            notes: z,
             createdBy: Meteor.user().emails[0].address,
             date: today,
             muscleSelected: muscleSelected
@@ -36,6 +40,12 @@ Template.rightLegFront.events({
         evt.preventDefault();
         var newPain = document.getElementById("rangeInput").value;
         document.getElementById("amount").value = newPain;
+    },
+
+    "change #tightnessInput": function(evt) {
+        evt.preventDefault();
+        var newPain = document.getElementById("tightnessInput").value;
+        document.getElementById("tightnessOutput").value = newPain;
     }
 
 
