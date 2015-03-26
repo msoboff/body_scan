@@ -1,14 +1,29 @@
 <template name="review">
+    {{#contentFor "headerButtonLeft"}}
+        {{>ionNavBackButton class="button-light" text=false}}
+    {{/contentFor}}
+
     {{#contentFor "headerTitle"}}
         <h1 class="title">Review</h1>
     {{/contentFor}}
 
+
+
     {{#ionView}}
         {{#ionContent}}
-            <h1>Date: {{date}}</h1>
-            <h1>Pain: {{pain}}</h1>
-            <h1>Tightness: {{tightness}}</h1>
-            <h1>Notes: {{notes}}</h1>
+
+            {{> graph}}
+
+            {{#ionList}}
+            {{#ionItem}}<p><strong>Date:</strong> {{date}}</p>{{/ionItem}}
+            {{#ionItem}}<p id="muscle"><strong>Muscle:</strong> {{muscleSelected}}</p>{{/ionItem}}
+            {{#ionItem}}<p><strong>Pain:</strong> {{pain}}</p>{{/ionItem}}
+            {{#ionItem}}<p><strong>Tightness:</strong> {{tightness}}</p>{{/ionItem}}
+            {{#ionItem}}<strong>Notes:</strong>
+                <br><p>
+                    <small>{{notes}}</small>
+            </p>{{/ionItem}}
+            {{/ionList}}
         {{/ionContent}}
     {{/ionView}}
 </template>

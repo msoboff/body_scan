@@ -128,3 +128,7 @@ textarea {
 input[type=range] {
     width: 300px;
 }
+
+h3 {
+    text-align: center;
+}

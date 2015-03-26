@@ -122,6 +122,11 @@ function tomorrow(currentDate) {
 
 Session.set('day', today);
 
+//Variable to check which side of body is being displayed; is updated upon click
+var side = "front";
+
+Session.set('side', "front");
+
 //helpers for recent.html
 Template.recent.helpers({
  //helper to show only the user selected muscle groups that match this particular day
@@ -144,22 +149,24 @@ Template.recent.helpers({
     },
 
     isCore:function() {
-        return this.muscleSelected === "core";
+        return this.muscleSelected === "core" && Session.equals('side', "front");
     },
 
     isRightLegFront: function() {
-        return this.muscleSelected === "rightLegFront";
+        return this.muscleSelected === "rightLegFront" && Session.equals('side', "front");
     },
 
     isLeftLegFront: function() {
-        return this.muscleSelected === "leftLegFront";
+        return this.muscleSelected === "leftLegFront" && Session.equals('side', "front");
     },
 
     isLeftArmFront: function() {
-        return this.muscleSelected === "leftArmFront";
+        return this.muscleSelected === "leftArmFront" && Session.equals('side', "front");
     }
 
 });
+
+
 
 Template.recent.events({
    'click #yesterday': function(event) {
@@ -177,6 +184,21 @@ Template.recent.events({
             Session.set('day', newDate);
             alert(Session.get('day'));
         }
+
+    },
+    'click #flip': function(event) {
+       //first check the session variable and see what it is set to.
+        //if it is set to front and users presses flip, then change the session variable and image to back
+        if(Session.equals('side', "front")) {
+            document.getElementById("bodyMap").style.backgroundImage = "url(human-back.png)";
+            Session.set('side', "back");
+
+            //do oppisite of above here
+        } else {
+            document.getElementById("bodyMap").style.backgroundImage = "url(human-front.png)";
+            Session.set('side', "front");
+        }
+
 
     }
 

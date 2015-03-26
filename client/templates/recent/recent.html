@@ -39,20 +39,21 @@
     {{#ionView}}
         {{#ionContent}}
 
-            <div class="padding">
-                <button class="button button-small icon-left ion-ios-body button-outline button-positive">Body</button><button class="button button-small icon-left ion-stats-bars button-outline button-positive">Graph</button>
-            </div>
+            <button class="button button-clear pull-right button-positive" id="flip">
+                {{> ionIcon icon='loop'}} Flip
+            </button>
+
             <div id="bodyMap">
                 <h2>{{pain}}</h2>
             {{#each muscleSet}}
                 {{#if isCore}}
-                <a href="#" class="corePain"></a>
+                    <a href="{{pathFor 'review'}}" class="corePain"></a>
                 {{/if}}
                 {{#if isRightLegFront}}
                 <a href="#" class="rightLegFrontPain"></a>
                 {{/if}}
                 {{#if isLeftLegFront}}
-                    <a href="#" class="leftLegFrontPain"></a>
+                    <a href="{{pathFor 'review'}}" class="leftLegFrontPain"></a>
                 {{/if}}
                 {{#if isLeftArmFront}}
                     <a href="{{pathFor 'review'}}" class="leftArmFrontPain"></a>

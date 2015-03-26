@@ -17,3 +17,5 @@ accounts-ui
 useraccounts:ionic
 underscore
 email
+chart:chart
+maazalik:highcharts
