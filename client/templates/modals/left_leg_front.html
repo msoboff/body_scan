@@ -23,12 +23,19 @@
                 </div>
                 <div class="item item-input-inset">
 
-                    <input type="range" id="rangeInput" name="rangeInput" min="0" max="10">
+                    <input type="range" id="tightnessInput" name="tightnessInput" min="0" max="10">
 
-                    <output name="amount" for="rangeInput">5</output>
+                    <output id="tightnessOutput" for="tightnessInput">5</output>
 
                 </div>
-                <input type="submit">
+                <div class="item item-divider">
+                    Notes
+                </div>
+                <input type="text" id="notes" placeholder="Enter notes">
+
+                <button class="button button-full button-positive" type="submit">
+                    Record
+                </button>
             </form>
         </div>
 

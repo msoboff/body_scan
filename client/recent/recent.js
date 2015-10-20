@@ -157,7 +157,7 @@ Template.recent.helpers({
     },
 
     isLeftLegFront: function() {
-        return this.muscleSelected === "leftLegFront" && Session.equals('side', "front");
+        return this.muscleGroup === "leftLegFront" && Session.equals('side', "front");
     },
 
     isLeftArmFront: function() {

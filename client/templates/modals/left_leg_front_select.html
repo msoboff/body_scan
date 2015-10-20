@@ -1,0 +1,20 @@
+<template name="leftLegFrontSelect">
+
+    {{#ionModal focusFirstInput=true title="Select Muscle or Joint"}}
+                {{#ionList}}
+
+                    {{#each postMuscles}}
+                        {{#ionItem buttonRight=true}}
+                            {{muscleName}}
+                            <button class="button button-positive" data-ion-modal="leftLegFront">{{> ionIcon icon='ios-arrow-forward'}}</button>
+                        {{/ionItem}}
+                    {{/each}}
+
+                {{/ionList}}
+
+
+
+    {{/ionModal}}
+
+
+</template>
