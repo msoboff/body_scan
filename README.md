@@ -4,7 +4,8 @@ Body Scan app
 Body Scan is an application to help people track, monitor, and manage their pain. 
 
 TODO:
-1)Add following body parts to be selected- 
+1)
+Add following body parts to be selected- 
 Left Foot
 Right Leg
 Right Foot
@@ -19,6 +20,7 @@ Right Calf
 Left Calf
 
 2)Display tightness on the graph next to pain in different color
+    2a) when there are not enough pain points to display on graph make sure graph still displays
 
 3)Get export of data functioning for desktop and mobile
 
