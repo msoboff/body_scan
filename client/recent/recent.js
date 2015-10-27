@@ -149,11 +149,11 @@ Template.recent.helpers({
     },
 
     isCore:function() {
-        return this.muscleSelected === "core" && Session.equals('side', "front");
+        return this.muscleGroup === "core" && Session.equals('side', "front");
     },
 
     isRightLegFront: function() {
-        return this.muscleSelected === "rightLegFront" && Session.equals('side', "front");
+        return this.muscleGroup === "rightLegFront" && Session.equals('side', "front");
     },
 
     isLeftLegFront: function() {
@@ -161,7 +161,7 @@ Template.recent.helpers({
     },
 
     isLeftArmFront: function() {
-        return this.muscleSelected === "leftArmFront" && Session.equals('side', "front");
+        return this.muscleGroup === "leftArmFront" && Session.equals('side', "front");
     }
 
 });

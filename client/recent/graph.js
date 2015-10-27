@@ -8,28 +8,19 @@ function builtColumn() {
 
     var newMuscle = Session.get('muscle');
 
-    var newCursor = Logs.find({muscleSelected: newMuscle},{sort: {date: -1}}).fetch();
+    var newCursor = Logs.find({muscleSelected: newMuscle},{sort: {date: 1}}).fetch();
 
-    var pain0 = Number(newCursor[0].pain);
-    var date0 = newCursor[0].date;
 
-    var pain1 = Number(newCursor[1].pain);
-    var date1 = newCursor[1].date;
+    var painArray = [];
+    var dateArray = [];
+    for(var i = 0; i<newCursor.length; i++) {
+        painArray[i] = Number(newCursor[i].pain);
+        dateArray[i] = newCursor[i].date;
+    }
 
-    var pain2 = Number(newCursor[2].pain);
-    var date2 = newCursor[2].date;
+    console.log(painArray);
+    console.log(dateArray);
 
-    var pain3 = Number(newCursor[3].pain);
-    var date3 = newCursor[3].date;
-
-    var pain4 = Number(newCursor[4].pain);
-    var date4 = newCursor[4].date;
-
-    //var pain5 = Number(newCursor[5].pain);
-    //var date5 = newCursor[5].date;
-    //
-    //var pain6 = Number(newCursor[6].pain);
-    //var date6 = newCursor[6].date;
 
 
     $('#container-column').highcharts({
@@ -47,15 +38,7 @@ function builtColumn() {
         },
 
         xAxis: {
-            categories: [
-                //date6,
-                //date5,
-                date4,
-                date3,
-                date2,
-                date1,
-                date0
-            ],
+            categories: dateArray,
 
             title: {
                 enabled: true,
@@ -89,7 +72,7 @@ function builtColumn() {
         series: [{
             name: "Pain Data",
             color: '#00FF00',
-            data: [pain4,pain3, pain2, pain1, pain0]
+            data: painArray
 
         }]
     });
