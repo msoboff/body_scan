@@ -162,7 +162,20 @@ Template.recent.helpers({
 
     isLeftArmFront: function() {
         return this.muscleGroup === "leftArmFront" && Session.equals('side', "front");
+    },
+    isLeftLowerLeg: function() {
+        return this.muscleGroup === "leftLowerLeg" && Session.equals('side', "front");
+    },
+    isLeftFoot: function() {
+        return this.muscleGroup === "leftFoot" && Session.equals('side', "front");
+    },
+    isRightLowerLeg: function() {
+        return this.muscleGroup === "rightLowerLeg" && Session.equals('side', "front");
+    },
+    isRightFoot: function() {
+        return this.muscleGroup === "rightFoot" && Session.equals('side', "front");
     }
+
 
 });
 

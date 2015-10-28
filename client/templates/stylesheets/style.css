@@ -49,30 +49,9 @@ textarea {
     height: 140px;
 }
 
-.rightLegFront{
-    position: absolute;
-    left: 105px;
-    top: 350px;
-    width: 60px;
-    height: 140px;
-}
-
-.rightLegFrontPain{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    left: 145px;
-    top: 420px;
-    border-radius: 50%;
-    background-color: black;
-    box-shadow:
-    0 0 60px 30px #ff0000,  /* inner white */
-    0 0 65px 35px #fff /* middle magenta */
-}
-
 .leftLegFront{
     position: absolute;
-    left: 175px;
+    left: 105px;
     top: 350px;
     width: 60px;
     height: 140px;
@@ -82,8 +61,113 @@ textarea {
     position: absolute;
     width: 30px;
     height: 30px;
+    left: 110px;
+    top: 420px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow:
+    0 0 60px 30px #ff0000,  /* inner white */
+    0 0 65px 35px #fff /* middle magenta */
+}
+
+.leftLowerLeg{
+    position: absolute;
+    left: 105px;
+    top: 500px;
+    width: 60px;
+    height: 140px;
+}
+
+.leftLowerLegPain{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 105px;
+    top: 580px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow:
+    0 0 60px 30px #ff0000,  /* inner white */
+    0 0 65px 35px #fff /* middle magenta */
+}
+
+.leftFoot{
+    position: absolute;
+    left: 105px;
+    top: 650px;
+    width: 60px;
+    height: 80px;
+}
+
+.leftFootPain{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 105px;
+    top: 650px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow:
+    0 0 60px 30px #ff0000,  /* inner white */
+    0 0 65px 35px #fff /* middle magenta */
+}
+
+.rightLegFront{
+    position: absolute;
+    left: 175px;
+    top: 350px;
+    width: 60px;
+    height: 140px;
+}
+
+.rightLegFrontPain{
+    position: absolute;
+    width: 30px;
+    height: 30px;
     left: 180px;
     top: 400px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow:
+    0 0 60px 30px #ff0000,  /* inner white */
+    0 0 65px 35px #fff /* middle magenta */
+}
+
+.rightLowerLeg{
+    position: absolute;
+    left: 175px;
+    top: 500px;
+    width: 60px;
+    height: 140px;
+}
+
+.rightLowerLegPain{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 175px;
+    top: 580px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow:
+    0 0 60px 30px #ff0000,  /* inner white */
+    0 0 65px 35px #fff /* middle magenta */
+}
+
+.rightFoot{
+    position: absolute;
+    left: 175px;
+    top: 650px;
+    width: 60px;
+    height: 80px;
+}
+
+.rightFootPain{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 175px;
+    top: 650px;
     border-radius: 50%;
     background-color: black;
     box-shadow:
@@ -100,7 +184,23 @@ textarea {
     background-color: yellow;
 }
 
+.rightLowerLeg:hover{
+    background-color: yellow;
+}
+
+.rightFoot:hover{
+    background-color: yellow;
+}
+
 .leftLegFront:hover {
+    background-color: yellow;
+}
+
+.leftLowerLeg:hover {
+    background-color: yellow;
+}
+
+.leftFoot:hover{
     background-color: yellow;
 }
 

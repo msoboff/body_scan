@@ -50,13 +50,25 @@
                     <a href="{{pathFor 'review'}}" class="corePain"></a>
                 {{/if}}
                 {{#if isRightLegFront}}
-                <a href="#" class="rightLegFrontPain"></a>
+                <a href="{{pathFor 'review'}}" class="rightLegFrontPain"></a>
                 {{/if}}
                 {{#if isLeftLegFront}}
                     <a href="{{pathFor 'review'}}" class="leftLegFrontPain"></a>
                 {{/if}}
                 {{#if isLeftArmFront}}
                     <a href="{{pathFor 'review'}}" class="leftArmFrontPain"></a>
+                {{/if}}
+                {{#if isLeftLowerLeg}}
+                    <a href="{{pathFor 'review'}}" class="leftLowerLegPain"></a>
+                {{/if}}
+                {{#if isLeftFoot}}
+                    <a href="{{pathFor 'review'}}" class="leftFootPain"></a>
+                {{/if}}
+                {{#if isRightLowerLeg}}
+                    <a href="{{pathFor 'review'}}" class="rightLowerLegPain"></a>
+                {{/if}}
+                {{#if isRightFoot}}
+                    <a href="{{pathFor 'review'}}" class="rightFootPain"></a>
                 {{/if}}
             {{/each}}
             </div>

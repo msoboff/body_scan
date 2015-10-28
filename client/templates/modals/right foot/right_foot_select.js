@@ -1,31 +1,28 @@
 
 var muscles = [
     {
-        muscleName: "Hip Flexor"
+        muscleName: "Big Toe"
     },
     {
-        muscleName: "Quadriceps"
+        muscleName: "Plantar Fascia/Bottom of Foot"
     },
     {
-        muscleName: "Groin"
+        muscleName: "Heel"
     },
     {
-        muscleName: "Knee"
+        muscleName: "Top of Foot"
     },
     {
-        muscleName: "Shin"
-    },
-    {
-        muscleName: "Ankle"
+        muscleName: "Outside of Foot"
     }
 ];
 
-Template.leftLegFrontSelect.helpers({
+Template.rightFootSelect.helpers({
     postMuscles: muscles
 });
 
 
-Template.leftLegFrontSelect.events({
+Template.rightFootSelect.events({
     'click button': function(event) {
         Session.set('targetMuscle', this.muscleName);
         console.log(this.muscleName);

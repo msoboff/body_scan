@@ -13,8 +13,10 @@ function builtColumn() {
 
     var painArray = [];
     var dateArray = [];
+    var tightnessArray = [];
     for(var i = 0; i<newCursor.length; i++) {
         painArray[i] = Number(newCursor[i].pain);
+        tightnessArray[i] = Number(newCursor[i].tightness);
         dateArray[i] = newCursor[i].date;
     }
 
@@ -69,12 +71,19 @@ function builtColumn() {
             }
         },
 
-        series: [{
-            name: "Pain Data",
-            color: '#00FF00',
-            data: painArray
+        series: [
+            {
+                name: "Pain Data",
+                color: '#00FF00',
+                data: painArray
 
-        }]
+            },
+            {
+               name: "Tightness Data",
+                data: tightnessArray
+            }
+
+        ]
     });
 }
 
